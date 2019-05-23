@@ -71,4 +71,20 @@ public class LongestSubListTest {
         List<Integer> actual = LongestSubList.getLargestSubList(input);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testDuplicateList() {
+        List<Integer> input = Arrays.asList(1, 2, 3, 4, 6, 6, 2, 6, 6, 7, 8, 9);
+        List<Integer> expected = Arrays.asList(1, 2, 3, 4, 6, 6);
+        List<Integer> actual = LongestSubList.getLargestSubList(input);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDuplicateListCount() {
+        List<Integer> input = Arrays.asList(1, 2, 3, 4, 6, 6, 2, 6, 7, 8, 9);
+        Integer expected = 6;
+        Integer actual = LongestSubList.getLargestSubListCount(input);
+        assertEquals(expected, actual);
+    }
 }
