@@ -30,7 +30,7 @@ public class LongestSubList {
     }
 
     public static List<Integer> getLargestSubList(List<Integer> list) {
-        List<Integer> currenList = new ArrayList<>();
+        List<Integer> currentList = new ArrayList<>();
         List<Integer> result = new ArrayList<>();
 
         Integer previousElement = null;
@@ -42,12 +42,12 @@ public class LongestSubList {
             }
 
             if (previousElement > list.get(i)) {
-                currenList = new ArrayList<>();
-                currenList.add(list.get(i));
+                currentList = new ArrayList<>();
+                currentList.add(list.get(i));
             } else {
-                currenList.add(list.get(i));
-                if (currenList.size() > result.size()) {
-                    result = currenList;
+                currentList.add(list.get(i));
+                if (currentList.size() > result.size()) {
+                    result = currentList;
                 }
             }
             previousElement = list.get(i);
