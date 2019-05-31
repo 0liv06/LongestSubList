@@ -87,4 +87,16 @@ public class LongestSubListTest {
         Integer actual = LongestSubList.getLargestSubListCount(input);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testNullEmptyListCount() {
+        Integer input = LongestSubList.getLargestSubListCount(null);
+        assertEquals(Integer.valueOf(0), input);
+    }
+
+    @Test
+    public void testNullEmptyList() {
+        List<Integer> input = LongestSubList.getLargestSubList(null);
+        assertEquals(Collections.emptyList(), input);
+    }
 }
